@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Novo contato</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #0b0b0b;
+          color: #eaeaea;
+        }
+
+        .card {
+          background: #1a1a1a;
+          padding: 16px;
+          border-radius: 8px;
+          border: 1px solid #2d2d2d;
+        }
+
+        .label {
+          color: #c084fc;
+          font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-$END$
+<div class="card">
+    <h2>Você recebeu um novo contato</h2>
+    <p><span class="label">Nome:</span> <span th:text="${name}">Nome</span></p>
+    <p><span class="label">E-mail:</span> <span th:text="${email}">email@example.com</span></p>
+    <p><span class="label">Telefone/WhatsApp:</span> <span th:text="${phone}">+55 00 00000-0000</span></p>
+    <p><span class="label">Mensagem:</span></p>
+    <p th:text="${message}">Mensagem aqui</p>
+</div>
 </body>
+
 </html>
